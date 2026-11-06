@@ -1,32 +1,8 @@
-# Feijocida — pacote PWA para Android (preparado, ainda não publicado)
+Feijocida - novo icone no GitHub Pages
 
-Este pacote **não foi publicado em lugar nenhum**. Inclui o Feijocida com as mesmas telas e funcionalidades da versão 1.1, mais instalação como aplicativo web e suporte offline após a primeira visita.
+1. Abra seu repositorio no GitHub e escolha Add file > Upload files.
+2. Envie a pasta icons (com icon-192.png, icon-512.png e maskable-512.png) e o sw.js para a RAIZ do repositorio, mantendo a estrutura e substituindo os arquivos de mesmo nome.
+3. Faca Commit changes e aguarde o Pages terminar.
+4. No Android, se continuar vendo o icone antigo, faca primeiro um backup dos seus dados em Feijocida. Depois remova apenas o atalho/app da tela inicial, abra o site atualizado no Chrome e use Adicionar a tela inicial/Instalar app novamente.
 
-## Agora, antes de hospedar
-
-- Continue usando o arquivo **feijocida_uso_local_com_estoque.html** separado do pacote. Ele abre no navegador sem internet e mantém o pedido anterior e os 17 itens iniciais de estoque.
-- Por segurança, o `index.html` deste pacote PWA **não inclui o pedido com nome de cliente**. Ele mantém o estoque inicial, mas começa com pedidos vazios em um navegador novo.
-- O pacote PWA **não instala diretamente a partir de um arquivo baixado** (`file://`). O Android normalmente precisa que ele seja aberto em um endereço HTTPS, ou em localhost para testes de desenvolvimento.
-- Os pedidos e o estoque ficam salvos apenas no navegador/dispositivo, pelo `localStorage`. **Não há sincronização entre celulares** e não há login. Faça backups regulares.
-
-## Quando decidir hospedar
-
-1. Faça backup dos pedidos no HTML usado atualmente (botão **↓ Backup**).
-2. Envie à raiz do site **todo o conteúdo desta pasta**, mantendo `index.html`, `manifest.webmanifest`, `sw.js` e a pasta `icons/`.
-3. Configure hospedagem estática com **HTTPS** (por exemplo GitHub Pages, quando quiser).
-4. Abra o endereço HTTPS no **Chrome do Android** e toque em **📱 Instalar app** se aparecer; se não aparecer, tente **⋮ → Adicionar à tela inicial / Instalar app**.
-5. Depois de instalar, use **↑ Restaurar** com o seu backup. O arquivo HTML local e o site hospedado usam armazenamentos diferentes.
-6. Faça um teste completo: nova reserva, marcar pago, conferir Estoque e Conta, fechar e reabrir offline.
-
-## Nota importante de privacidade
-
-GitHub Pages público expõe o código e os dados de exemplo incluídos nele. Este pacote não publica pedidos pessoais pré-carregados, mas **o site público não limita o acesso à equipe**. Como o Feijocida é destinado ao uso interno, antes de colocar dados reais num site acessível ao público vale decidir como proteger o acesso e sincronizar dispositivos.
-
-## Arquivos
-
-- `index.html`: interface da Feijocida + registro do PWA; estoque inicial de 17 itens.
-- `manifest.webmanifest`: nome, ícones e modo aplicativo.
-- `sw.js`: cache dos arquivos para abrir offline.
-- `icons/`: ícones Android em 192 px, 512 px e maskable.
-
-Não substitua a sua versão de trabalho por este pacote sem fazer backup.
+O HTML, manifest e dados do Feijocida nao foram modificados. O sw.js altera apenas o identificador do cache offline para forcar o download das novas imagens.

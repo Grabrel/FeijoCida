@@ -1,5 +1,5 @@
 /* Feijocida — recursos offline (sem transmissao de dados pessoais) */
-const CACHE = 'feijocida-pwa-v1.2.0';
+const CACHE = 'feijocida-pwa-v1.2.1-icone';
 const FILES = ['./', './index.html', './manifest.webmanifest',
   './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png'];
 
